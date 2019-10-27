@@ -1,0 +1,14 @@
+unsorted_array = [-2, 0.4, 1000, 0, 66, 13, 70.06, -90, -2, 24]
+
+
+def bubble(array):
+    last = len(array) - 1
+    for i in range(0, last):
+        for x in range(0, last-i):
+            if array[x] > array[x+1]:
+                array[x], array[x+1] = array[x+1], array[x]
+    return array
+
+
+sorted_array = bubble(unsorted_array).copy()
+print(unsorted_array)
